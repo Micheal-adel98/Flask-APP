@@ -1,0 +1,12 @@
+{% extends "base.html"%} 
+{% block title %}Todo{% endblock %}
+{% block content %}
+<h1>{{todo.title}}</h1>
+<p>{{todo.description}}</p>
+<button>
+    <a href="{{url_for('delete_todo', id=todo.id)}}" >delete</a>
+</button>
+
+
+
+{% endblock %}

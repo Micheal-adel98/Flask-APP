@@ -1,0 +1,12 @@
+{% extends "base.html"%} {% block title %}Index{% endblock %}
+ {% block content%}
+ <button><a href="{{url_for('create_todo')}}" >create todo</a></button>
+ {% for todo in todos%}
+<div>
+  
+  <h1><a href="{{url_for('get_todo', id=todo.id)}}" >{{todo.title}}</a></h1>
+  <p>{{todo.description}}</p>
+</div>
+<hr />
+{% endfor %} 
+{% endblock %}
